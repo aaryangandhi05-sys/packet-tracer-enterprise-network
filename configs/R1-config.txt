@@ -1,0 +1,30 @@
+Router configuration
+
+# R1 Configuration
+# Purpose: Core router connecting the 10.6.3.0/24, 10.6.4.0/24,
+# and 10.6.5.0/24 networks using OSPF.
+
+hostname R1
+
+interface GigabitEthernet0/0/0
+ ip address 10.6.3.2 255.255.255.0
+ duplex auto
+ speed auto
+
+interface GigabitEthernet0/0/1
+ shutdown
+
+interface Serial0/1/0
+ ip address 10.6.4.1 255.255.255.0
+ clock rate 64000
+
+interface Serial0/1/1
+ ip address 10.6.5.1 255.255.255.0
+ clock rate 64000
+
+router ospf 1
+ network 10.6.3.0 0.0.0.255 area 0
+ network 10.6.4.0 0.0.0.255 area 0
+ network 10.6.5.0 0.0.0.255 area 0
+
+ip classless
