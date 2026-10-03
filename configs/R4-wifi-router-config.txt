@@ -1,0 +1,31 @@
+# R4 Wireless Router Configuration
+
+# Internet / WAN Settings
+IP Configuration: Static
+IPv4 Address: 10.6.2.2
+Subnet Mask: 255.255.255.0
+Default Gateway: 10.6.2.1
+DNS Server: Not configured
+
+# LAN Settings
+LAN IPv4 Address: 10.6.1.1
+Subnet Mask: 255.255.255.0
+
+# 2.4 GHz Wireless Settings
+SSID: Tech170Group6
+Channel: 6 - 2.437 GHz
+Coverage Range: 250 meters
+Authentication: Disabled
+
+# 5 GHz Wireless Settings
+SSID: Default
+Channel: Auto
+Coverage Range: 250 meters
+Authentication: Disabled
+
+# Guest Wireless Settings
+Guest 2.4 GHz SSID: Default
+Guest 2.4 GHz Authentication: Disabled
+
+Guest 5 GHz SSID: Default
+Guest 5 GHz Authentication: Disabled
