@@ -105,6 +105,30 @@ Connectivity was verified using ICMP ping tests between network devices and end 
 
 Successful communication confirmed that routing and addressing were configured correctly.
 
+## Verification
+
+### OSPF Neighbors
+The following output shows R1 successfully forming OSPF adjacencies with neighboring routers and the multilayer switch.
+
+![OSPF Neighbors](images/ospf-neighbors.png)
+
+### Routing Table
+R1's routing table shows directly connected networks and routes learned dynamically through OSPF.
+
+![Routing Table](images/routing-table.png)
+
+### End-to-End Connectivity
+
+#### Ping to R2 Loopback
+A device on the `10.6.1.0/24` LAN successfully pinged the R2 loopback interface at `10.6.8.1`, confirming connectivity across the routed network.
+
+![Ping to R2 Loopback](images/ping-loopback.png)
+
+#### Ping to Remote LAN
+A device on the `10.6.1.0/24` LAN successfully pinged the remote host at `10.6.7.10`, confirming end-to-end communication between different subnets.
+
+![Ping to Remote LAN](images/ping-remote-lan.png)
+
 ## Skills Demonstrated
 
 - Network design
