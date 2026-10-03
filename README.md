@@ -1,6 +1,11 @@
 # packet-tracer-enterprise-network
 Cisco Packet Tracer network project featuring routers, switches, wireless devices, IP addressing, OSPF routing, multilayer switching, and end-to-end connectivity testing.
 
+
+## Network Topology
+
+![Network Topology] <img width="1687" height="712" alt="network-topology" src="https://github.com/user-attachments/assets/22ee4400-ac22-4538-9542-4cb2c67aa651" />
+
 # Cisco Packet Tracer Enterprise Network
 
 This project demonstrates the design and configuration of a small enterprise network using Cisco Packet Tracer.
