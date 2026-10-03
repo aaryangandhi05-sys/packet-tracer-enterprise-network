@@ -127,7 +127,7 @@ A device on the `10.6.1.0/24` LAN successfully pinged the R2 loopback interface 
 #### Ping to Remote LAN
 A device on the `10.6.1.0/24` LAN successfully pinged the remote host at `10.6.7.10`, confirming end-to-end communication between different subnets.
 
-![Ping to Remote LAN](images/ping-laptop170.png)
+![Ping to Remote LAN](images/ping-remote-lan.png)
 
 ## Skills Demonstrated
 
