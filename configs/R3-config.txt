@@ -1,0 +1,14 @@
+# R3 Configuration
+# Purpose: OSPF router connecting the 10.6.4.0/24 and 10.6.6.0/24 networks.
+
+hostname R3
+
+interface Serial0/1/0
+ ip address 10.6.4.2 255.255.255.0
+
+interface Serial0/1/1
+ ip address 10.6.6.1 255.255.255.0
+
+router ospf 1
+ network 10.6.4.0 0.0.0.255 area 0
+ network 10.6.6.0 0.0.0.255 area 0
