@@ -1,1 +1,20 @@
+# R2 Configuration
+# Purpose: OSPF router connecting the 10.6.5.0/24 and 10.6.6.0/24
+# networks, with Loopback0 on 10.6.8.0/24.
 
+hostname R2
+
+interface Loopback0
+ ip address 10.6.8.1 255.255.255.0
+
+interface Serial0/1/0
+ ip address 10.6.5.2 255.255.255.0
+
+interface Serial0/1/1
+ ip address 10.6.6.2 255.255.255.0
+ clock rate 2000000
+
+router ospf 1
+ network 10.6.5.0 0.0.0.255 area 0
+ network 10.6.6.0 0.0.0.255 area 0
+ network 10.6.8.0 0.0.0.255 area 0
