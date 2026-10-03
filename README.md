@@ -4,7 +4,7 @@ Cisco Packet Tracer network project featuring routers, switches, wireless device
 
 ## Network Topology
 
-![Network Topology] <img width="1687" height="712" alt="network-topology" src="https://github.com/user-attachments/assets/22ee4400-ac22-4538-9542-4cb2c67aa651" />
+<img width="1687" height="712" alt="network-topology" src="https://github.com/user-attachments/assets/22ee4400-ac22-4538-9542-4cb2c67aa651" />
 
 # Cisco Packet Tracer Enterprise Network
 
