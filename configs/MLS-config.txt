@@ -1,0 +1,23 @@
+# Multilayer Switch Configuration
+# Purpose: Provides Layer 3 routing between the 10.6.2.0/24,
+# 10.6.3.0/24, and 10.6.7.0/24 networks using OSPF.
+
+hostname MLS
+
+ip routing
+
+interface GigabitEthernet1/0/1
+ no switchport
+ ip address 10.6.2.1 255.255.255.0
+
+interface GigabitEthernet1/0/2
+ no switchport
+ ip address 10.6.3.1 255.255.255.0
+
+interface Vlan1
+ ip address 10.6.7.1 255.255.255.0
+
+router ospf 1
+ network 10.6.2.0 0.0.0.255 area 0
+ network 10.6.3.0 0.0.0.255 area 0
+ network 10.6.7.0 0.0.0.255 area 0
