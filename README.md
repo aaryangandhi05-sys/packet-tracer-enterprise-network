@@ -2,9 +2,7 @@
 Cisco Packet Tracer network project featuring routers, switches, wireless devices, IP addressing, OSPF routing, multilayer switching, and end-to-end connectivity testing.
 
 
-## Network Topology
 
-<img width="1687" height="712" alt="network-topology" src="https://github.com/user-attachments/assets/22ee4400-ac22-4538-9542-4cb2c67aa651" />
 
 # Cisco Packet Tracer Enterprise Network
 
@@ -13,6 +11,60 @@ This project demonstrates the design and configuration of a small enterprise net
 ## Project Overview
 
 The network includes routers, switches, wireless devices, end-user systems, and a server. The network was configured to provide communication between multiple devices and network segments.
+
+## Network Topology
+
+<img width="1687" height="712" alt="network-topology" src="https://github.com/user-attachments/assets/22ee4400-ac22-4538-9542-4cb2c67aa651" />
+
+## Network Design
+
+The network is divided into multiple routed segments that communicate using OSPF.
+
+### R1
+R1 connects three routed networks:
+
+- `10.6.3.0/24`
+- `10.6.4.0/24`
+- `10.6.5.0/24`
+
+It participates in OSPF Area 0 and provides routing between the multilayer switch and the other routers.
+
+### R2
+R2 connects:
+
+- `10.6.5.0/24`
+- `10.6.6.0/24`
+- Loopback network `10.6.8.0/24`
+
+The loopback interface is also advertised through OSPF.
+
+### R3
+R3 connects:
+
+- `10.6.4.0/24`
+- `10.6.6.0/24`
+
+It provides another routing path between R1 and R2 through OSPF.
+
+### Multilayer Switch
+The multilayer switch provides Layer 3 routing between:
+
+- `10.6.2.0/24`
+- `10.6.3.0/24`
+- `10.6.7.0/24`
+
+`ip routing` is enabled so the switch can route traffic between networks. Routed ports are used to connect the switch to the wireless router and R1.
+
+### Wireless Router
+The wireless router connects the local wireless and wired LAN to the routed network.
+
+- WAN IP: `10.6.2.2/24`
+- Default gateway: `10.6.2.1`
+- LAN IP: `10.6.1.1/24`
+- Main SSID: `Tech170Group6`
+- 2.4 GHz channel: 6
+
+The wireless router provides connectivity for devices on the `10.6.1.0/24` LAN.
 
 ## Technologies and Concepts
 
